@@ -1,17 +1,16 @@
-body{
+body {
   display: flex;
   justify-content: center;
-
 }
-.container{
+.container {
   margin: 10px;
   background: #555;
   border-radius: 5px;
   min-width: 400px;
-  margin-top: 20%;
+  margin-top: 10%;
   box-shadow: 0 0 10px;
 }
-#display{
+#display {
   height: 100px;
   /* border: 4px solid black; */
   background: white;
@@ -22,53 +21,52 @@ body{
   justify-content: flex-end;
   font-size: 35px;
 }
-main{
+main {
   display: grid;
-  grid-template: repeat(4,50px)/repeat(4,1fr);
+  grid-template: repeat(4, 50px) / repeat(4, 1fr);
   gap: 5px;
   font-weight: bold;
   font-size: xx-large;
   margin: 10px 10px;
 }
-.container span{
+.container span {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
 }
-.num{
+.num {
   background: rgb(206, 202, 202);
   transition: all 0.25s;
 }
-.num:hover{
+.num:hover {
   background: rgb(136, 136, 136);
   transform: scale(0.95);
 }
-#equal{
-grid-column: 4/span 1;
-grid-row: 3/span 1;
-transition: all 0.25s;
-background: lightgreen;
+#equal {
+  grid-column: 4 / span 1;
+  grid-row: 3 / span 1;
+  transition: all 0.25s;
+  background: lightgreen;
 }
-#equal:hover{
+#equal:hover {
   background: rgb(54, 192, 42);
   transform: scale(0.95);
 }
-#clear{
+#clear {
   background: rgb(255, 0, 0);
   transition: all 0.25s;
 }
-#clear:hover{
+#clear:hover {
   background: rgb(207, 7, 7);
   transform: scale(0.95);
 }
 
-
-.sign{
+.sign {
   background: rgb(135, 206, 250);
   transition: all 0.25s;
 }
-.sign:hover{
+.sign:hover {
   background: rgb(89, 168, 218);
   transform: scale(0.95);
 }
