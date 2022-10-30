@@ -1,4 +1,8 @@
 let num=[]
+let condition=false;
+let sign=[],ex=[]
+
+
 for(let i=0;i<10;i++){
     num[i]=document.getElementById('num'+String(i))
 }
@@ -6,11 +10,18 @@ let temp='',ans
 let display=document.getElementById('display')
 for(let i=0;i<10;i++){
     num[i].addEventListener('click',()=>{
+        if(condition){
+            temp=''
+            display.innerHTML=''
+            ex=[]
+            condition=false;
+        }
         temp+=String(i)
         display.innerHTML+=String(i)
+        
     })
 }
-let sign=[],ex=[]
+
 
 for(let i=0;i<4;i++){
     sign[i]=document.getElementById('sign'+String(i))
@@ -19,6 +30,12 @@ for(let i=0;i<4;i++){
 for(let i=0;i<4;i++){
 
     sign[i].addEventListener('click',()=>{
+        if(condition){
+            temp=''
+            display.innerHTML=''
+            condition=false;
+            ex=[]
+        }
     let s;
 
     if(i==0)s='+'
@@ -75,6 +92,7 @@ equal.addEventListener('click',()=>{
             }
             ans=parse(ex2)
             display.innerHTML=String(ans)
+            condition=true;
         }
     }
 })
